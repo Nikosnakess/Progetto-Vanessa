@@ -15,17 +15,10 @@
         </div>
     </div>
     <script>
-        // Imposta la data di fine countdown solo la prima volta
-        if (!localStorage.getItem('countdownEndDate')) {
-            const targetDate = new Date();
-            targetDate.setDate(targetDate.getDate() + 49);
-            targetDate.setHours(targetDate.getHours() + 7);
-            targetDate.setMinutes(targetDate.getMinutes() + 30);
-            localStorage.setItem('countdownEndDate', targetDate);
-        }
+        // Imposta la data di fine countdown
+        const targetDate = new Date('2023-09-15T12:30:00'); // Sostituisci con la tua data di fine desiderata
 
         function calculateTimeRemaining() {
-            const targetDate = new Date(localStorage.getItem('countdownEndDate'));
             const now = new Date();
             const timeDifference = targetDate - now;
 
