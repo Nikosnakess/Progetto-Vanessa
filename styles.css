@@ -40,7 +40,7 @@ body, html {
 #countdown {
     font-family: 'Impact', sans-serif; /* Font Impact per il countdown */
     font-size: 2.5em; /* Dimensione del font per il countdown */
-    color: pink; /* Colore rosa per il countdown */
+    color: pink !important; /* Colore rosa per il countdown */
     margin-bottom: 20px;
 }
 
