@@ -49,8 +49,9 @@ p {
 /* Media queries per schermi piccoli */
 @media (max-width: 768px) {
     .background {
-        justify-content: center; /* Centra il contenitore sui dispositivi mobili */
-        padding-right: 0; /* Rimuovi il padding a destra sui dispositivi mobili */
+        justify-content: flex-end; /* Posiziona il contenitore a destra per schermi piccoli */
+        padding-right: 20%; /* Mantieni il padding a destra sui dispositivi mobili */
+        background-image: url('Vane-1080x1920.jpg'); /* Immagine per schermi verticali */
     }
 
     .container {
@@ -68,14 +69,5 @@ p {
 
     p {
         font-size: 1em; /* Riduci la dimensione del font sui dispositivi mobili */
-    }
-}
-
-/* Media queries per schermi con risoluzione 1080x1920 */
-@media (min-width: 768px) and (orientation: portrait) {
-    .background {
-        background-image: url('Vane-1080x1920.jpg'); /* Immagine per schermi 1080x1920 */
-        justify-content: center; /* Centra il contenitore per schermi verticali */
-        padding-right: 0; /* Rimuovi il padding a destra per schermi verticali */
     }
 }
