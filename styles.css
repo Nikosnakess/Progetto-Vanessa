@@ -5,7 +5,7 @@ body, html {
 }
 
 .background {
-    background-image: url('Vane.jpg'); /* Immagine di sfondo predefinita */
+    background-image: url('Vane.jpg'); /* Immagine di sfondo predefinita per desktop */
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -16,9 +16,11 @@ body, html {
 }
 
 /* Stili per i dispositivi mobili */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1080px) {
     .background {
         background-image: url('Vane-1080x1920.jpg'); /* Immagine di sfondo per dispositivi mobili */
+        background-size: cover; /* Assicurati che l'immagine copra l'intero schermo */
+        background-position: center;
         justify-content: center; /* Centrato orizzontalmente */
         align-items: flex-start; /* Allineamento in alto */
         padding-right: 0; /* Rimuove il padding destro */
