@@ -23,7 +23,6 @@ body, html {
     border: 2px solid black; /* Traccia nera */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Aggiungi ombra al riquadro */
     max-width: 600px; /* Limita la larghezza massima del contenitore */
-    margin: 0 auto; /* Centra il contenitore orizzontalmente */
 }
 
 .large-number {
@@ -49,9 +48,11 @@ p {
 /* Media queries per schermi piccoli */
 @media (max-width: 768px) {
     .background {
-        justify-content: flex-end; /* Posiziona il contenitore a destra per schermi piccoli */
-        padding-right: 20%; /* Mantieni il padding a destra sui dispositivi mobili */
         background-image: url('Vane-1080x1920.jpg'); /* Immagine per schermi verticali */
+        justify-content: flex-end; /* Posiziona il contenitore a destra per schermi piccoli */
+        padding-right: 10%; /* Mantieni il padding a destra sui dispositivi mobili */
+        background-size: cover;
+        background-position: center;
     }
 
     .container {
@@ -69,5 +70,16 @@ p {
 
     p {
         font-size: 1em; /* Riduci la dimensione del font sui dispositivi mobili */
+    }
+}
+
+/* Media queries per schermi verticali */
+@media (orientation: portrait) {
+    .background {
+        background-image: url('Vane-1080x1920.jpg'); /* Immagine per schermi verticali */
+        justify-content: flex-end; /* Posiziona il contenitore a destra per schermi verticali */
+        padding-right: 10%; /* Mantieni il padding a destra sui dispositivi verticali */
+        background-size: cover;
+        background-position: center;
     }
 }
