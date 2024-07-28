@@ -9,7 +9,8 @@
 <body>
     <div class="background">
         <div class="container">
-            <h1><span class="countdown-number">-50</span> GIORNI AL RITORNO DI VANESSINA</h1>
+            <h1><span class="countdown-number" id="days-number">-50</span></h1>
+            <h1>GIORNI AL RITORNO DI VANESSINA</h1>
             <div id="countdown"></div>
             <p>(E regalerà tanti soldini al suo amichetto Mario :3)</p>
         </div>
@@ -35,9 +36,11 @@
 
         function updateCountdown() {
             const countdownElement = document.getElementById("countdown");
+            const daysNumberElement = document.getElementById("days-number");
             const { days, hours, minutes, seconds } = calculateTimeRemaining();
 
             countdownElement.textContent = `${days} giorni, ${hours} ore, ${minutes} minuti, ${seconds} secondi`;
+            daysNumberElement.textContent = `-${days}`;
 
             setTimeout(updateCountdown, 1000);
         }
