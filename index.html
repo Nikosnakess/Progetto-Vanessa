@@ -39,7 +39,7 @@
             const daysNumberElement = document.getElementById("days-number");
             const { days, hours, minutes, seconds } = calculateTimeRemaining();
 
-            countdownElement.textContent = `${days} giorni, ${hours} ore, ${minutes} minuti, ${seconds} secondi`;
+            countdownElement.textContent = `${days}g, ${hours}h, ${minutes}m, ${seconds}s`;
             daysNumberElement.textContent = `-${days}`;
 
             setTimeout(updateCountdown, 1000);
