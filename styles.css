@@ -29,18 +29,15 @@ body, html {
     transform: translate(-40%, -50%); /* Centra il contenitore parzialmente a sinistra per compensare il 60% */
 }
 
-.large-number {
-    font-size: 3em;
-    display: block;
-    margin-bottom: 10px;
+.large-number, #countdown {
+    font-family: 'Impact', sans-serif; /* Font Impact per il countdown e il numero "50" */
+    font-size: 3em; /* Aumenta la dimensione del font */
+    margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aggiungi ombra al testo */
 }
 
 #countdown {
-    font-family: 'Impact', sans-serif; /* Font Impact per il countdown */
-    font-size: 3em; /* Aumenta la dimensione del font del countdown */
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aggiungi ombra al testo */
 }
 
 p {
@@ -67,12 +64,8 @@ p {
         transform: translate(-50%, 0); /* Centra il contenitore */
     }
 
-    .large-number {
+    .large-number, #countdown {
         font-size: 2em; /* Riduci la dimensione del font sui dispositivi mobili */
-    }
-
-    #countdown {
-        font-size: 2em; /* Riduci la dimensione del font del countdown sui dispositivi mobili */
     }
 
     p {
