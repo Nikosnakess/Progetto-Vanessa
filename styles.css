@@ -12,6 +12,7 @@ body, html {
     display: flex;
     justify-content: center; /* Centra orizzontalmente il contenitore */
     align-items: center;
+    position: relative; /* Necessario per il posizionamento assoluto del contenitore */
 }
 
 .container {
@@ -22,8 +23,10 @@ body, html {
     border: 2px solid black; /* Traccia nera */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Aggiungi ombra al riquadro */
     max-width: 600px; /* Limita la larghezza massima del contenitore */
-    position: relative; /* Necessario per il posizionamento assoluto */
-    transform: translateX(30%); /* Sposta il contenitore centro destra */
+    position: absolute; /* Posizionamento assoluto */
+    top: 50%; /* Posiziona al centro verticale */
+    left: 60%; /* Posiziona più a destra del centro */
+    transform: translate(-50%, -50%); /* Centra il contenitore */
 }
 
 .large-number {
@@ -50,7 +53,6 @@ p {
 @media (max-width: 768px) {
     .background {
         background-image: url('Vane-1080x1920.jpg'); /* Immagine per schermi verticali */
-        justify-content: center; /* Centra il contenitore sui dispositivi mobili */
         background-size: cover;
         background-position: center;
         align-items: flex-start; /* Allinea il contenitore in alto */
@@ -60,8 +62,10 @@ p {
     .container {
         width: 90%; /* Imposta una larghezza del 90% per il contenitore sui dispositivi mobili */
         padding: 10px; /* Riduci il padding sui dispositivi mobili */
-        margin: 0 auto; /* Centra il contenitore orizzontalmente */
-        margin-top: 20px; /* Aggiungi spazio in alto */
+        position: absolute; /* Posizionamento assoluto */
+        top: 5%; /* Posiziona leggermente sotto il bordo superiore */
+        left: 50%; /* Centra orizzontalmente */
+        transform: translate(-50%, 0); /* Centra il contenitore */
     }
 
     .large-number {
@@ -74,22 +78,5 @@ p {
 
     p {
         font-size: 1em; /* Riduci la dimensione del font sui dispositivi mobili */
-    }
-}
-
-/* Media queries per schermi verticali */
-@media (orientation: portrait) {
-    .background {
-        background-image: url('Vane-1080x1920.jpg'); /* Immagine per schermi verticali */
-        justify-content: center; /* Centra il contenitore per schermi verticali */
-        background-size: cover;
-        background-position: center;
-        align-items: flex-start; /* Allinea il contenitore in alto */
-        padding-top: 20px; /* Aggiungi un po' di spazio in alto */
-    }
-
-    .container {
-        margin: 0 auto; /* Centra il contenitore orizzontalmente */
-        margin-top: 20px; /* Aggiungi spazio in alto */
     }
 }
