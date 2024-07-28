@@ -3,6 +3,7 @@ let countdownDate = new Date();
 countdownDate.setDate(countdownDate.getDate() + 49);
 countdownDate.setHours(countdownDate.getHours() + 7);
 countdownDate.setMinutes(countdownDate.getMinutes() + 30);
+countdownDate.setSeconds(0); // Imposta i secondi a 0 per avere un valore fisso
 
 // Aggiorna il countdown ogni secondo
 let countdownFunction = setInterval(function() {
