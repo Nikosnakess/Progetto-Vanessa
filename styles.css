@@ -42,7 +42,11 @@ body, html {
     font-size: 2.5em; /* Dimensione del font per il countdown */
     color: pink !important; /* Colore rosa per il countdown */
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aggiungi ombra al testo */
+    text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000; /* Traccia esterna nera */
 }
 
 p {
