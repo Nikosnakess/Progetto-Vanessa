@@ -5,9 +5,7 @@ body, html {
 }
 
 .background {
-    /* Usa l'immagine come sfondo */
-    background-image: url('Vane.jpg');
-    /* Assicura che l'immagine copra l'intero schermo */
+    background-image: url('Vane.jpg'); /* Immagine per schermi grandi */
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -70,5 +68,14 @@ p {
 
     p {
         font-size: 1em; /* Riduci la dimensione del font sui dispositivi mobili */
+    }
+}
+
+/* Media queries per schermi con risoluzione 1080x1920 */
+@media (min-width: 768px) and (orientation: portrait) {
+    .background {
+        background-image: url('Vane-1080x1920.jpg'); /* Immagine per schermi 1080x1920 */
+        justify-content: center; /* Centra il contenitore per schermi verticali */
+        padding-right: 0; /* Rimuovi il padding a destra per schermi verticali */
     }
 }
