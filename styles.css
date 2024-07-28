@@ -22,7 +22,7 @@ body, html {
     border: 2px solid black; /* Traccia nera */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Aggiungi ombra al riquadro */
     max-width: 600px; /* Limita la larghezza massima del contenitore */
-    margin-right: 25px; /* Sposta il contenitore 25px a destra */
+    margin-right: 15px; /* Sposta il contenitore 15px a destra (25 - 10 = 15) */
 }
 
 .large-number {
@@ -53,14 +53,14 @@ p {
         background-size: cover;
         background-position: center;
         align-items: flex-start; /* Allinea il contenitore in alto */
-        padding-top: 0px; /* Aggiungi un po' di spazio in alto */
+        padding-top: 0; /* Togli padding in alto */
     }
 
     .container {
         width: 90%; /* Imposta una larghezza del 90% per il contenitore sui dispositivi mobili */
         padding: 10px; /* Riduci il padding sui dispositivi mobili */
         margin: 0 auto; /* Centra il contenitore orizzontalmente */
-        margin-top: 20px; /* Sposta il contenitore verso il basso */
+        margin-top: 0; /* Fai toccare il riquadro la parte alta della risoluzione */
     }
 
     .large-number {
@@ -84,11 +84,11 @@ p {
         background-size: cover;
         background-position: center;
         align-items: flex-start; /* Allinea il contenitore in alto */
-        padding-top: 20px; /* Aggiungi un po' di spazio in alto */
+        padding-top: 0; /* Togli padding in alto */
     }
 
     .container {
         margin: 0 auto; /* Centra il contenitore orizzontalmente */
-        margin-top: 20px; /* Sposta il contenitore verso il basso */
+        margin-top: 0; /* Fai toccare il riquadro la parte alta della risoluzione */
     }
 }
