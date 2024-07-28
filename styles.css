@@ -23,7 +23,7 @@ body, html {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Aggiungi ombra al riquadro */
     max-width: 600px; /* Limita la larghezza massima del contenitore */
     position: relative; /* Necessario per il posizionamento assoluto */
-    transform: translateX(20%); /* Sposta il contenitore leggermente a destra */
+    transform: translateX(30%); /* Sposta il contenitore centro destra */
 }
 
 .large-number {
@@ -61,7 +61,7 @@ p {
         width: 90%; /* Imposta una larghezza del 90% per il contenitore sui dispositivi mobili */
         padding: 10px; /* Riduci il padding sui dispositivi mobili */
         margin: 0 auto; /* Centra il contenitore orizzontalmente */
-        margin-top: 30px; /* Abbassa il riquadro di poco */
+        margin-top: 20px; /* Aggiungi spazio in alto */
     }
 
     .large-number {
@@ -90,6 +90,6 @@ p {
 
     .container {
         margin: 0 auto; /* Centra il contenitore orizzontalmente */
-        margin-top: 30px; /* Abbassa il riquadro di poco */
+        margin-top: 20px; /* Aggiungi spazio in alto */
     }
 }
