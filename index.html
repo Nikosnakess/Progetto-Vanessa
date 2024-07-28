@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="background">
-        <img src="Vane-1920x1080.jpg" class="desktop" alt="Sfondo desktop">
+        <img src="Vane.jpg" class="desktop" alt="Sfondo desktop">
         <img src="Vane-1080x1920.jpg" class="mobile" alt="Sfondo mobile">
         <div class="container">
             <h1><span class="countdown-number" id="days-number">-50</span> GIORNI AL RITORNO DI VANESSINA</h1>
@@ -37,7 +37,7 @@
             const daysNumberElement = document.getElementById("days-number");
             const { days, hours, minutes, seconds } = calculateTimeRemaining();
 
-            countdownElement.textContent = `${days}g, ${hours}h, ${minutes}m, ${seconds}s`;
+            countdownElement.textContent = `${days}d, ${hours}h, ${minutes}m, ${seconds}s`;
             daysNumberElement.textContent = `-${days}`;
 
             setTimeout(updateCountdown, 1000);
