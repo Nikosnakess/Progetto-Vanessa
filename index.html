@@ -9,15 +9,15 @@
 <body>
     <div class="background">
         <div class="container">
-            <h1><span class="countdown-number" id="days-number">-50</span></h1>
-            <h1>GIORNI AL RITORNO DI VANESSINA</h1>
+            <h1><span class="countdown-number" id="days-number">-50</span> GIORNI AL RITORNO DI VANESSINA</h1>
             <div id="countdown"></div>
             <p>(E regalerà tanti soldini al suo amichetto Mario :3)</p>
         </div>
     </div>
     <script>
-        // Data di fine countdown (modifica questa data per la tua data di fine)
-        const targetDate = new Date("2023-09-15T07:30:00"); // Usa il formato ISO per specificare la data e l'ora
+        // Calcola la data di fine countdown 49 giorni e 7 ore e 30 minuti dal momento attuale
+        const now = new Date();
+        const targetDate = new Date(now.getTime() + 49 * 24 * 60 * 60 * 1000 + 7 * 60 * 60 * 1000 + 30 * 60 * 1000);
 
         function calculateTimeRemaining() {
             const now = new Date();
