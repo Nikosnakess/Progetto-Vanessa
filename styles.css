@@ -10,7 +10,7 @@ body, html {
     background-position: center;
     height: 100%;
     display: flex;
-    justify-content: flex-end; /* Posiziona il contenitore a destra */
+    justify-content: center; /* Centra orizzontalmente il contenitore */
     align-items: center;
 }
 
@@ -22,8 +22,8 @@ body, html {
     border: 2px solid black; /* Traccia nera */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Aggiungi ombra al riquadro */
     max-width: 600px; /* Limita la larghezza massima del contenitore */
-    margin-right: auto; /* Rimuovi il margine destro */
-    margin-left: 10px; /* Sposta il contenitore più a sinistra */
+    position: relative; /* Necessario per il posizionamento assoluto */
+    transform: translateX(-10%); /* Sposta il contenitore leggermente a sinistra */
 }
 
 .large-number {
@@ -54,14 +54,14 @@ p {
         background-size: cover;
         background-position: center;
         align-items: flex-start; /* Allinea il contenitore in alto */
-        padding-top: 20px; /* Aggiungi un po' di spazio in alto */
+        padding-top: 10px; /* Aggiungi un po' di spazio in alto */
     }
 
     .container {
         width: 90%; /* Imposta una larghezza del 90% per il contenitore sui dispositivi mobili */
         padding: 10px; /* Riduci il padding sui dispositivi mobili */
         margin: 0 auto; /* Centra il contenitore orizzontalmente */
-        margin-top: 20px; /* Aggiungi margine superiore per distanziare dal bordo superiore */
+        margin-top: 40px; /* Abbassa il riquadro di poco */
     }
 
     .large-number {
@@ -85,11 +85,11 @@ p {
         background-size: cover;
         background-position: center;
         align-items: flex-start; /* Allinea il contenitore in alto */
-        padding-top: 20px; /* Aggiungi un po' di spazio in alto */
+        padding-top: 10px; /* Aggiungi un po' di spazio in alto */
     }
 
     .container {
         margin: 0 auto; /* Centra il contenitore orizzontalmente */
-        margin-top: 20px; /* Aggiungi margine superiore per distanziare dal bordo superiore */
+        margin-top: 40px; /* Abbassa il riquadro di poco */
     }
 }
