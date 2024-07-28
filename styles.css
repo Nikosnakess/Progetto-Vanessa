@@ -12,7 +12,6 @@ body, html {
     display: flex;
     justify-content: flex-end; /* Posiziona il contenitore a destra */
     align-items: center;
-    padding-right: 20%; /* Sposta il contenitore più verso il centro */
 }
 
 .container {
@@ -23,6 +22,7 @@ body, html {
     border: 2px solid black; /* Traccia nera */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Aggiungi ombra al riquadro */
     max-width: 600px; /* Limita la larghezza massima del contenitore */
+    margin: 0 auto; /* Centra il contenitore orizzontalmente */
 }
 
 .large-number {
@@ -49,15 +49,17 @@ p {
 @media (max-width: 768px) {
     .background {
         background-image: url('Vane-1080x1920.jpg'); /* Immagine per schermi verticali */
-        justify-content: flex-end; /* Posiziona il contenitore a destra per schermi piccoli */
-        padding-right: 10%; /* Mantieni il padding a destra sui dispositivi mobili */
+        justify-content: center; /* Centra il contenitore sui dispositivi mobili */
         background-size: cover;
         background-position: center;
+        align-items: flex-start; /* Allinea il contenitore in alto */
+        padding-top: 20px; /* Aggiungi un po' di spazio in alto */
     }
 
     .container {
         width: 90%; /* Imposta una larghezza del 90% per il contenitore sui dispositivi mobili */
         padding: 10px; /* Riduci il padding sui dispositivi mobili */
+        margin: 0 auto; /* Centra il contenitore orizzontalmente */
     }
 
     .large-number {
@@ -77,9 +79,17 @@ p {
 @media (orientation: portrait) {
     .background {
         background-image: url('Vane-1080x1920.jpg'); /* Immagine per schermi verticali */
-        justify-content: flex-end; /* Posiziona il contenitore a destra per schermi verticali */
-        padding-right: 10%; /* Mantieni il padding a destra sui dispositivi verticali */
+        justify-content: center; /* Centra il contenitore per schermi verticali */
         background-size: cover;
         background-position: center;
+        align-items: flex-start; /* Allinea il contenitore in alto */
+        padding-top: 20px; /* Aggiungi un po' di spazio in alto */
+    }
+}
+
+/* Media queries per schermi grandi */
+@media (min-width: 769px) {
+    .background {
+        padding-right: 10%; /* Sposta il contenitore più verso il centro */
     }
 }
