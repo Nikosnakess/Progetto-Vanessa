@@ -29,15 +29,16 @@ body, html {
     transform: translate(-40%, -50%); /* Centra il contenitore parzialmente a sinistra per compensare il 60% */
 }
 
-.countdown-number, #countdown {
-    font-family: 'Impact', sans-serif; /* Font Impact per il countdown e il numero "50" */
+.countdown-number {
+    font-family: 'Impact', sans-serif; /* Font Impact per il numero "50" */
     font-size: 2em; /* Dimensione del font per il numero "50" */
-    color: pink; /* Colore rosa per il numero "50" e il countdown */
+    color: pink; /* Colore rosa per il numero "50" */
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aggiungi ombra al testo */
 }
 
 #countdown {
+    font-family: 'Impact', sans-serif; /* Font Impact per il countdown */
     font-size: 2.5em; /* Dimensione del font per il countdown */
     color: pink; /* Colore rosa per il countdown */
     margin-bottom: 20px;
