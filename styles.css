@@ -31,11 +31,31 @@ body, html {
     z-index: -1;
 }
 
+.background img.desktop {
+    display: none;
+}
+
+.background img.mobile {
+    display: block;
+}
+
+@media(min-width: 768px) {
+    .background img.desktop {
+        display: block;
+    }
+    .background img.mobile {
+        display: none;
+    }
+}
+
 .container {
     background-color: rgba(255, 255, 0, 0.7);
     padding: 20px;
     border: 2px solid #000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+    text-align: center;
 }
 
 h1 {
@@ -43,13 +63,13 @@ h1 {
 }
 
 .countdown-number {
-    font-size: 3em;
+    font-size: 2.5em; /* Ridotto rispetto alla versione precedente */
     color: pink;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 #countdown {
-    font-size: 2em;
+    font-size: 1.5em; /* Ridotto rispetto alla versione precedente */
     color: pink;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
