@@ -5,8 +5,9 @@ body, html {
 }
 
 .background {
-    /* Usa l'immagine come sfondo per desktop */
+    /* Usa l'immagine come sfondo */
     background-image: url('Vane.jpg');
+    /* Assicura che l'immagine copra l'intero schermo */
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -14,31 +15,6 @@ body, html {
     justify-content: flex-end; /* Posiziona il contenitore a destra */
     align-items: center;
     padding-right: 20%; /* Sposta il contenitore più verso il centro */
-    position: relative;
-}
-
-.background::after {
-    content: '';
-    background-image: url('Vane-1080x1920.jpg');
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: none;
-    z-index: -1;
-}
-
-@media (max-width: 767px) {
-    .background {
-        background-image: none;
-    }
-
-    .background::after {
-        display: block;
-    }
 }
 
 .container {
@@ -54,20 +30,18 @@ body, html {
     font-size: 3em;
     display: block;
     margin-bottom: 10px;
-    color: pink; /* Colore rosa */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Aggiungi ombra al testo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aggiungi ombra al testo */
 }
 
 #countdown {
     font-family: 'Impact', sans-serif; /* Font Impact per il countdown */
     font-size: 3em; /* Aumenta la dimensione del font del countdown */
     margin-bottom: 20px;
-    color: pink; /* Colore rosa */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Aggiungi ombra al testo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aggiungi ombra al testo */
 }
 
 p {
     margin-top: 20px;
     font-size: 1.2em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Aggiungi ombra al testo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aggiungi ombra al testo */
 }
