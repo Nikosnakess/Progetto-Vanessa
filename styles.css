@@ -5,7 +5,7 @@ body, html {
 }
 
 .background {
-    background-image: url('Vane.jpg');
+    background-image: url('Vane.jpg'); /* Immagine di sfondo predefinita */
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -13,6 +13,27 @@ body, html {
     justify-content: flex-end; /* Posiziona il contenitore a destra */
     align-items: center;
     padding-right: 10vw; /* Usa vw per una dimensione più reattiva */
+}
+
+/* Stili per i dispositivi mobili */
+@media only screen and (max-width: 768px) {
+    .background {
+        background-image: url('Vane-1080x1920.jpg'); /* Immagine di sfondo per dispositivi mobili */
+        justify-content: center; /* Centrato orizzontalmente */
+        align-items: flex-start; /* Allineamento in alto */
+        padding-right: 0; /* Rimuove il padding destro */
+        padding-top: 20px; /* Aggiunge margine in alto */
+        padding-bottom: 20px; /* Aggiunge margine in basso */
+    }
+
+    .container {
+        position: relative;
+        top: 0; /* Allinea il contenitore in alto */
+        margin: 0 auto; /* Centra il contenitore orizzontalmente */
+        padding: 20px;
+        width: 90%; /* Imposta una larghezza più piccola per i dispositivi mobili */
+        box-sizing: border-box; /* Include padding e bordo nella larghezza totale */
+    }
 }
 
 .container {
