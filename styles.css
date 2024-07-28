@@ -1,86 +1,73 @@
 body, html {
-    margin: 0;
-    padding: 0;
     height: 100%;
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
+    margin: 0;
+    font-family: Arial, sans-serif; /* Font normale per il testo */
 }
 
 .background {
-    position: relative;
-    width: 100%;
+    /* Usa l'immagine come sfondo per desktop */
+    background-image: url('Vane.jpg');
+    background-size: cover;
+    background-position: center;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; /* Posiziona il contenitore a destra */
     align-items: center;
-    overflow: hidden;
+    padding-right: 20%; /* Sposta il contenitore più verso il centro */
+    position: relative;
 }
 
-.background img {
+.background::after {
+    content: '';
+    background-image: url('Vane-1080x1920.jpg');
+    background-size: cover;
+    background-position: center;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    display: none;
     z-index: -1;
 }
 
-.background img.desktop {
-    display: block;
-}
-
-.background img.mobile {
-    display: none;
-}
-
 @media (max-width: 767px) {
-    .background img.desktop {
-        display: none;
+    .background {
+        background-image: none;
     }
-    .background img.mobile {
+
+    .background::after {
         display: block;
     }
 }
 
 .container {
-    background-color: rgba(255, 255, 0, 0.7);
+    text-align: center; /* Centra tutto il testo */
+    background-color: rgba(255, 255, 0, 0.8); /* Sfondo giallo trasparente per il testo */
     padding: 20px;
-    border: 2px solid #000;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    position: relative;
-    z-index: 1;
-    text-align: center;
+    border-radius: 10px;
+    border: 2px solid black; /* Traccia nera */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Aggiungi ombra al riquadro */
 }
 
-h1 {
-    font-size: 2em;
-}
-
-.countdown-number {
-    font-size: 2.5em; /* Dimensione del numero 50 */
+.large-number {
+    font-size: 3em;
+    display: block;
+    margin-bottom: 10px;
     color: pink; /* Colore rosa */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Aggiungi ombra al testo */
 }
 
 #countdown {
-    font-size: 1.5em; /* Dimensione del countdown */
+    font-family: 'Impact', sans-serif; /* Font Impact per il countdown */
+    font-size: 3em; /* Aumenta la dimensione del font del countdown */
+    margin-bottom: 20px;
     color: pink; /* Colore rosa */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Aggiungi ombra al testo */
 }
 
-/* Stili aggiuntivi per il mobile */
-@media (max-width: 767px) {
-    .container {
-        position: absolute;
-        top: 20px; /* Aggiungi un margine superiore per il mobile */
-        left: 50%;
-        transform: translateX(-50%); /* Centra il contenitore orizzontalmente */
-        padding: 10px; /* Ridotto per il mobile */
-    }
+p {
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Aggiungi ombra al testo */
 }
