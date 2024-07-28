@@ -1,74 +1,47 @@
 body, html {
-    margin: 0;
-    padding: 0;
     height: 100%;
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
+    margin: 0;
+    font-family: Arial, sans-serif; /* Font normale per il testo */
 }
 
 .background {
-    position: relative;
-    width: 100%;
+    /* Usa l'immagine come sfondo */
+    background-image: url('Vane.jpg');
+    /* Assicura che l'immagine copra l'intero schermo */
+    background-size: cover;
+    background-position: center;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; /* Posiziona il contenitore a destra */
     align-items: center;
-    overflow: hidden;
-}
-
-.background img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.background img.desktop {
-    display: none;
-}
-
-.background img.mobile {
-    display: block;
-}
-
-@media(min-width: 768px) {
-    .background img.desktop {
-        display: block;
-    }
-    .background img.mobile {
-        display: none;
-    }
+    padding-right: 20%; /* Sposta il contenitore più verso il centro */
 }
 
 .container {
-    background-color: rgba(255, 255, 0, 0.7);
+    text-align: center; /* Centra tutto il testo */
+    background-color: rgba(255, 255, 0, 0.8); /* Sfondo giallo trasparente per il testo */
     padding: 20px;
-    border: 2px solid #000;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    position: relative;
-    z-index: 1;
+    border-radius: 10px;
+    border: 2px solid black; /* Traccia nera */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Aggiungi ombra al riquadro */
 }
 
-h1 {
-    font-size: 2em;
-}
-
-.countdown-number {
+.large-number {
     font-size: 3em;
-    color: pink;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    display: block;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aggiungi ombra al testo */
 }
 
 #countdown {
-    font-size: 2em;
-    color: pink;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-family: 'Impact', sans-serif; /* Font Impact per il countdown */
+    font-size: 3em; /* Aumenta la dimensione del font del countdown */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aggiungi ombra al testo */
+}
+
+p {
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aggiungi ombra al testo */
 }
