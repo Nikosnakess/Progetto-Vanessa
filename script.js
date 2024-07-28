@@ -1,6 +1,16 @@
-// Imposta la data di fine a 50 giorni da oggi
-let countDownDate = new Date();
-countDownDate.setDate(countDownDate.getDate() + 50);
+// Verifica se la data di fine è già salvata in localStorage
+let endDate = localStorage.getItem('countDownDate');
+
+if (!endDate) {
+    // Imposta la data di fine a 50 giorni da oggi e salvala in localStorage
+    let countDownDate = new Date();
+    countDownDate.setDate(countDownDate.getDate() + 50);
+    endDate = countDownDate.getTime();
+    localStorage.setItem('countDownDate', endDate);
+} else {
+    // Recupera la data di fine salvata in localStorage
+    endDate = parseInt(endDate, 10);
+}
 
 // Aggiorna il conto alla rovescia ogni secondo
 let x = setInterval(function() {
@@ -8,7 +18,7 @@ let x = setInterval(function() {
     let now = new Date().getTime();
     
     // Calcola la distanza tra adesso e la data di fine
-    let distance = countDownDate - now;
+    let distance = endDate - now;
     
     // Calcola i giorni, ore, minuti e secondi
     let days = Math.floor(distance / (1000 * 60 * 60 * 24));
