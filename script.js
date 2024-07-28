@@ -2,11 +2,9 @@
 let endDate = localStorage.getItem('countDownDate');
 
 if (!endDate) {
-    // Imposta la data di fine a 49 giorni, 7 ore e 30 minuti da oggi e salvala in localStorage
+    // Imposta la data di fine a 50 giorni da oggi e salvala in localStorage
     let countDownDate = new Date();
-    countDownDate.setDate(countDownDate.getDate() + 49);
-    countDownDate.setHours(countDownDate.getHours() + 7);
-    countDownDate.setMinutes(countDownDate.getMinutes() + 30);
+    countDownDate.setDate(countDownDate.getDate() + 50);
     endDate = countDownDate.getTime();
     localStorage.setItem('countDownDate', endDate);
 } else {
@@ -32,9 +30,6 @@ let x = setInterval(function() {
     document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
     + minutes + "m " + seconds + "s ";
     
-    // Visualizza il numero -50 con aggiornamenti
-    document.querySelector(".large-number").textContent = `-${days}`;
-
     // Se il conto alla rovescia è finito, scrivi un messaggio
     if (distance < 0) {
         clearInterval(x);
