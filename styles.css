@@ -1,49 +1,86 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown di 50 Giorni</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="background">
-        <img src="Vane.jpg" class="desktop" alt="Sfondo desktop">
-        <img src="Vane-1080x1920.jpg" class="mobile" alt="Sfondo mobile">
-        <div class="container">
-            <h1><span class="countdown-number" id="days-number">-50</span> GIORNI AL RITORNO DI VANESSINA</h1>
-            <div id="countdown"></div>
-            <p>(E regalerà tanti soldini al suo amichetto Mario :3)</p>
-        </div>
-    </div>
-    <script>
-        const now = new Date();
-        const targetDate = new Date(now.getTime() + 49 * 24 * 60 * 60 * 1000 + 7 * 60 * 60 * 1000 + 30 * 60 * 1000);
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
 
-        function calculateTimeRemaining() {
-            const now = new Date();
-            const timeDifference = targetDate - now;
+.background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
 
-            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+.background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
 
-            return { days, hours, minutes, seconds };
-        }
+.background img.desktop {
+    display: block;
+}
 
-        function updateCountdown() {
-            const countdownElement = document.getElementById("countdown");
-            const daysNumberElement = document.getElementById("days-number");
-            const { days, hours, minutes, seconds } = calculateTimeRemaining();
+.background img.mobile {
+    display: none;
+}
 
-            countdownElement.textContent = `${days}d, ${hours}h, ${minutes}m, ${seconds}s`;
-            daysNumberElement.textContent = `-${days}`;
+@media (max-width: 767px) {
+    .background img.desktop {
+        display: none;
+    }
+    .background img.mobile {
+        display: block;
+    }
+}
 
-            setTimeout(updateCountdown, 1000);
-        }
+.container {
+    background-color: rgba(255, 255, 0, 0.7);
+    padding: 20px;
+    border: 2px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
 
-        updateCountdown();
-    </script>
-</body>
-</html>
+h1 {
+    font-size: 2em;
+}
+
+.countdown-number {
+    font-size: 2.5em; /* Dimensione del numero 50 */
+    color: pink; /* Colore rosa */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+#countdown {
+    font-size: 1.5em; /* Dimensione del countdown */
+    color: pink; /* Colore rosa */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Stili aggiuntivi per il mobile */
+@media (max-width: 767px) {
+    .container {
+        position: absolute;
+        top: 20px; /* Aggiungi un margine superiore per il mobile */
+        left: 50%;
+        transform: translateX(-50%); /* Centra il contenitore orizzontalmente */
+        padding: 10px; /* Ridotto per il mobile */
+    }
+}
