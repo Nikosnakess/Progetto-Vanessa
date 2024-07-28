@@ -16,11 +16,8 @@
         </div>
     </div>
     <script>
-        // Calcola la data di fine countdown 49 giorni e 7 ore e 30 minuti dal momento attuale
-        const targetDate = new Date();
-        targetDate.setDate(targetDate.getDate() + 49);
-        targetDate.setHours(targetDate.getHours() + 7);
-        targetDate.setMinutes(targetDate.getMinutes() + 30);
+        // Data di fine countdown (modifica questa data per la tua data di fine)
+        const targetDate = new Date("2023-09-15T07:30:00"); // Usa il formato ISO per specificare la data e l'ora
 
         function calculateTimeRemaining() {
             const now = new Date();
